@@ -1,0 +1,298 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <META name="description" content="A MATLAB toolbox implementing numerical algorithms based to rational Krylov spaces."><META name="author" content="Mario Berljafa and Stefan G&uuml;ttel"><META name="keywords" content="rational Krylov, MATLAB, toolbox, RKFIT"><META name="revisit-after" content="7 days"><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+   <title>RKToolbox Download</title><meta name="generator" content="MATLAB 8.3">
+   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-08">
+
+               
+               <style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; max-width:750px; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000; line-height:150%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#18D; line-height:100%; font-weight:normal; }
+h2 { padding:8px;  margin:40px 0px 20px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; background-color:#eee; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.menu { position:fixed;  width:100%; min-width:750px; padding:20px; background-color:#222; 
+ color:#fff; font-size:1.6em; font-family:sans-serif; z-index:1000; padding-left:0 }
+.menu a { width:200px; text-align:center; color:#fff; padding:18px; text-decoration:none }
+.menu a:hover { border-bottom:5px solid #222 }
+.nav { position:fixed; font-size:1.2em; line-height:140%; width:270px; padding:10px; padding-left:0px; float:left;height:100%;}
+.nav ul { list-style-type: none; padding:0; margin:0 }
+.nav li { padding-left:100px; padding-bottom:3px; padding-top:3px; background-repeat: no-repeat;  background-position: 5px 5px; } 
+.nav li:hover { background-color:#eee; cursor:pointer }
+.nav li small { font-size:.8em }
+.nav a { text-decoration:none }
+.nav a:hover { }
+.content { font-size:1.2em; line-height:140%; padding:20px; }
+
+pre, tt, code { font-size:15px; }
+pre { margin:0px 0px 15px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+  </style>
+  
+  
+  
+  
+  <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-634190-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+  </head>
+  
+  <body><div class="menu">
+  <a href="index.html" style="background-color:#222;">&nbsp;Rational Krylov Toolbox for MATLAB&nbsp;</a><a href="" style="background-color:#3AF;">&nbsp;Download&nbsp;</a><a href="guide/html/index.html" style="background-color:#7C3;">&nbsp;&nbsp;&nbsp;Guide&nbsp;&nbsp;&nbsp;</a><a href="examples/html/index.html" style="background-color:#E36;">Examples</a></div><br><br><br><br>
+       
+        <div class="content"><h1>Download the Rational Krylov Toolbox</h1>
+            
+           <!-- <h2>Contents</h2>
+            <div><ul>
+                    <li><a href="#1">Overview and Download</a></li>
+                    <li><a href="#14">Version History</a></li>
+                    <li><a href="#15">Planned Features</a></li>
+                    <li><a href="#16">Acknowledgments</a></li>
+                    <li><a href="#17">References</a></li>
+            </ul></div>
+            -->
+            
+            <a name="1"></a>
+          <!--  <h2>Overview and Download</h2> -->
+
+            
+            <div style="background-color:#AAD9FF; padding:25px">
+                <p><b>To automatically download and install the Rational Krylov Toolbox, 
+                simply copy and paste<br> the following three lines to your MATLAB command window:</b></p>
+                
+                <pre class="language-matlab" style="font-size:13pt">
+ unzip(<span class="string">'http://guettel.com/rktoolbox/rktoolbox.zip'</span>); 
+ cd(<span class="string">'rktoolbox'</span>); addpath(fullfile(cd)); 
+ addpath(fullfile(cd,<span class="string">'utils'</span>)); savepath</pre></div>
+            <br>
+            
+            <p>Alternatively, the toolbox can be downloaded manually from <a href="http://guettel.com/rktoolbox/rktoolbox.zip">http://guettel.com/rktoolbox/rktoolbox.zip</a>. 
+            To install it, unpack the zip file and add the main folder <span class="string">'rktoolbox'</span> and the subfolder <span class="string">'utils'</span> to your MATLAB path.</p>
+            
+            <a name="14"></a>
+            <h2>Versions</h2>
+            
+            <table>
+                <tr><th>Version</th><th width="13%">Release</th><th>Changes</th></tr>
+
+				<tr><td><a href="rktoolbox.zip"><b>2.5 (latest)</b></a></td><td>2016-11-04</td><td>
+                        
+						<b>GALLERY:</b> New rational approximants (SQRT0H, SQRT2H, INVSQRT2H) on two disjoint intervals and indefinite intervals.<br>
+                        <b>RKFUN:</b> Fixed erroneous normalization in <span class="string">rdivide</span><br>
+                        <b>OTHER:</b> 
+                        New examples on Zolotatev problems by Alex Townsend and the compression of exterior Helmholtz problems; 
+                        new utility functions <span class="string">util_colfun, util_dtnfun, util_log2lin, util_markovfunmv, util_recover_rad, util_reorder_poles</span>.
+						
+                </td></tr>                
+				
+                <tr><td><a href="rktoolbox_2-4.zip">2.4</a></td><td>2016-06-01</td><td>
+                        
+                        <b>RAT_KRYLOV</b> Can now simulate the parallel generation of basis vectors
+                        using various continuation strategies; see also [5].<br>
+						<b>GALLERY:</b> Fixed bug concerning the rational approximants 
+                        SQRT, SIGN, and STEP (thanks to R. Luce and A. Townsend for pointing these out)
+                        and improved accuracy of these approximants.<br>
+                        <b>OTHER:</b> 
+                        Four new examples on the parallel Arnoldi method and related 
+                        new utility function <span class="string">util_continuation_fom</span>; 
+                        utility functions <span class="string">util_ellipjc</span> and
+                        <span class="string">util_ellipkkp</span> from the SC Toolbox [6].
+						
+                </td></tr>                
+                
+                <tr><td><a href="rktoolbox_2-3.zip">2.3</a></td><td>2016-03-06</td><td>
+
+                        <b>DIFF:</b> Removed infinite generalized eigenvalues for the sampling (same in EZPLOT). 
+                        Now supports MP, uses real Jordan form for real-valued (quasi) RADs.<br>
+						<b>FEVAL:</b> Now works with quasi RADs. More efficient evaluation of r(A,V) for a block of vectors V.<br>
+						<b>RKFIT:</b> Removed bug related to 'best'/'last' flag (was off by one index).<br>
+                        <b>OTHER:</b> 
+                        Two new examples (FEAST, complex networks).
+						
+                </td></tr>
+                <tr><td><a href="rktoolbox_2-2.zip">2.2</a></td><td>2015-09-28</td><td>
+                        <b>RKFIT:</b>
+                        changed default iteration number to 10; added return option to output
+                        'best' (default) or 'last' approximant
+                        <br>
+                        <b>RKFUN:</b>
+                        reworked constructor and added support for symbolic strings; added gallery with Zolotarev rational functions, Moebius transforms, etc.; 
+                        added support for composition with Moebius transforms, addition, multiplication,
+                        division, exponentiation; inverse function of Moebius transform; Newton correction in roots and 'real' option, 
+						also now using util_householder; now using some private functions; diff now samples at standard Ritz values
+                        <br>
+                        <b>MOVE_POLES_IMPL:</b>
+                        added 'real' option 
+                        <br>
+                        <b>OTHER:</b> 
+                        new front web page; new example on rational filter design; Content.m and License.txt files added; 
+                        restructured the test folder and added several new tests
+                </td></tr>
+                <tr><td><a href="rktoolbox_2-1.zip">2.1</a></td><td>2015-07-14</td><td>
+                        
+                        <b>RAT_KRYLOV:</b>
+                        added option for a waitbar;
+                        <br>
+                        
+                        <b>RKFIT:</b>
+                        fixed reduction strategy to achieve scaling-invariance for F and b; 
+                        <br>
+                        
+                        <b>OTHER:</b>
+                        new utility functions (<span class="string">util_discretise_polygon,
+                        util_linearise_nlep</span>), 
+                        new examples on (non)linear eigenvalue problems and the semiseparable 
+                        structure of rational Krylov projections                        
+                </td></tr>
+                <tr><td><a href="rktoolbox_2-0.zip">2.0</a></td><td>2015-06-13</td><td>
+                        
+                        <b>RAT_KRYLOV:</b>
+                        new pencil structure for (A,B) supported, allowing the use of function handles; 
+                        allows for rerunning an existing rational Arnoldi decomposition; 
+                        allows to expand an existing decomposition; 
+                        parameter structure; 
+                        supports classical and modified GS with or without reorthogonalisation; 
+                        can do one iteration of iterative refinement for the linear system solves; 
+                        fixed bug with near 0 poles;
+                        <br>
+                        
+                        <b>HH2TH:</b>
+                        can now deal with real-valued quasi-Hessenberg pencils; 
+                        <br>
+                        
+                        <b>RKFIT:</b>
+                        generalized to nondiagonal approximants;
+                        automated degree reduction;
+                        allows for multiple "functions" F and a block of vectors in b;
+                        allows for weighting matrices D;
+                        changed to relative misfit; 
+                        added output structure for more insight; 
+                        rational function now returned as an RKFUN object; 
+                        added utility function to convert data to real form if possible; 
+                        <br>
+                        
+                        <b>RKFUN:</b>
+                        more efficient evaluation via rerunning; 
+                        implemented as a class with 24 new methods; 
+                        including root-finding, conversion to partial fraction form, and differentiation; 
+                        <br>
+                        
+                        <b>OTHER:</b>
+                        new utils subfolder; 
+                        added several examples and tests
+                        
+                        
+                </td></tr>
+                <tr><td><a href="rktoolbox_1-0.zip">1.0</a></td><td>2015-02-04</td><td>First version of the toolbox</td></tr>
+            </table>
+            
+            
+            <a name="15"></a>
+            <h2>Planned features</h2>
+            <p>The Rational Krylov Toolbox 
+                is under continuous development and new features will be added over time. 
+            Here is our current todo list:</p>
+            <div><ul>
+                    <li>Make <tt>move_poles_expl</tt> preserve real pencils with complex conjugate eigenpairs.</li>
+                    <li>Write example for <tt>util_markovfunmv</tt>; see, e.g., [7].</li>
+                    <li>Add more unit tests for all functionalities.</li>
+                    <li>Block rational Krylov methods and biorthognalization.</li>
+                    <li>Integration with MATLAB's Parallel Computing Toolbox.</li>
+                    <li>Matrix-valued RKFUN's.</li>
+                    <!--<li>Add an optional waitbar to <tt>rat_krylov</tt>.</li>-->
+                    <!--<li>Add utility file for solving nonlinear eigenvalue problems.</li>-->
+                    <!--<li>Allow the first input argument of <tt>rkfit</tt> to be a RKFUN object.</li>-->
+            </ul></div>
+            
+            <a name="16"></a>
+            <h2>Acknowledgments</h2>
+            <p>This web site was generated using MATLAB's <tt>publish</tt> command. 
+                The convenient 3-line Matlab code for automated download and installation of 
+            this toolbox was adapted from a similar code on the <a href="http://chebfun.org">Chebfun website</a>.</p>
+            <p>We are grateful to Pavel Holoborodko for providing and maintaining the 
+            powerful Advanpix multiprecision toolbox [1], and to Toby Driscoll for allowing us to include
+            two elliptic function routines from [6].</p>
+            <p>We also acknowledge contributions to the example collection by Mary Aprahamian and Alex Townsend.</p>
+            <a name="17"></a>
+            <h2>References</h2>
+            
+            <p>[1] Advanpix LLC., <i>Multiprecision Computing Toolbox for MATLAB</i>, 
+                ver 3.8.3.8882, Tokyo, Japan, 2015. 
+            <a href="http://www.advanpix.com/">http://www.advanpix.com</a>.</p>
+            
+            <p>[2] M. Berljafa and S. G&uuml;ttel, <i>A Rational Krylov Toolbox for MATLAB</i>, 
+                MIMS EPrint 2014.56, Manchester Institute for Mathematical Sciences, The University of Manchester, UK, 2014. 
+            Available at <a href="http://eprints.ma.man.ac.uk/2390/">http://eprints.ma.man.ac.uk/2390/</a>.</p>
+            
+            <p>[3] M. Berljafa and S. G&uuml;ttel, <i>Generalized rational Krylov decompositions with an application to rational approximation</i>, 
+	      SIAM J. Matrix Anal. Appl., 36(2):894--916, 2015.</p>
+            
+            <p>[4] M. Berljafa and S. G&uuml;ttel, <i>The RKFIT algorithm for nonlinear rational approximation</i>, 
+            MIMS EPrint 2015.38, Manchester Institute for Mathematical Sciences, The University of Manchester, UK, 2015. 
+            Available at <a href="http://eprints.ma.man.ac.uk/2309/">http://eprints.ma.man.ac.uk/2309/</a>.</p>
+            
+            <p>[5] M. Berljafa and S. G&uuml;ttel, <i>Parallelization of the rational Arnoldi algorithm</i>, 
+            MIMS EPrint 2016.32, Manchester Institute for Mathematical Sciences, The University of Manchester, UK, 2016. 
+            Available at <a href="http://eprints.ma.man.ac.uk/2503/">http://eprints.ma.man.ac.uk/2503/</a>.</p>
+            
+            <p>[6] T. A. Driscoll, <i>A MATLAB toolbox for Schwarz-Christoffel mapping</i>, 
+            ACM Trans. Math. Soft., 22:168--186, 1996.</p>
+            
+            <p>[7] S. G&uuml;ttel and L. Knizhnerman, <i>A black-box rational Arnoldi variant for Cauchy--Stieltjes matrix functions</i>, 
+            BIT Numer. Math., 53(3):595--616, 2013.</p>
+            
+            <p>[8] A. Ruhe, <i>Rational Krylov: A practical algorithm for large sparse nonsymmetric matrix pencils</i>, 
+            SIAM J. Sci. Comput., 19(5):1535--1551, 1998.</p>
+        </div> <!-- content div -->
+</body></html>

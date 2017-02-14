@@ -1,51 +1,37 @@
-function [KT, HT, QT, ZT] = move_poles_impl(K, H, c) 
-% MOVE_POLE_IMPL    Changing the poles of the pencil (H, K).
+function [KT, HT, QT, ZT] = move_poles_impl(K, H, c, flag)
+% MOVE_POLES_IMPL    Changing the poles of the pencil (H, K).
 %
-% [KT, HT, QT, ZT] = move_poles_impl(K, H, c) for (n+1)-by-n
-% upper-Hessenberg matrices K and H and an (n+1)-by-1 vector c, 
-% produces upper-Hessenberg matrices KT and HT and unitary
-% matrices QT and ZT such that
-% 
+% [KT, HT, QT, ZT] = move_poles_impl(K, H, c, flag) for
+% (n+1)-by-n (quasi-)upper-Hessenberg matrices K and H and an
+% (n+1)-by-1 vector c, produces (quasi-)upper-Hessenberg matrices
+% KT and HT and unitary matrices QT and ZT such that  
+%
 %      KT = QT*K*ZT, HT = QT*H*ZT,
 %
 % and the poles of (KT, HT) are replaced by those imposed by c.
 %
-% This algorithm is described in 
+% The parameter flag is optional, and can be passed as flag =
+% 'real' to obtain quasi-upper-Hessenberg matrices KT and HT,
+% provided that K, H, and c are real-valued. 
+% 
+% This algorithm is described in
 %
-% [1] M. Berljafa and S. G\"{u}ttel. Generalized rational Krylov
+% [1] M. Berljafa and S. G{\"u}ttel. Generalized rational Krylov
 %     decompositions with an application to rational approximation,
-%     MIMS EPrint 2014.59, Manchester Institute for Mathematical
-%     Sciences, The University of Manchester, UK, 2014. 
+%     SIAM J. Matrix Anal. Appl., 36(2):894--916, 2015.
 
-  c = c/norm(c);
-  [u, beta] = house(c);
-  HT = H - (beta*u)*(u'*H);
-  KT = K - (beta*u)*(u'*K);
+  if nargin == 3, flag = 'complex'; end
+
+  [u, beta, gamma] = util_householder(c);
   
-  [H, K, QT, ZT] = qz(HT(2:end, :), KT(2:end, :));
-  QT = blkdiag(1, QT);
-  HT = [HT(1, :)*ZT; H];
-  KT = [KT(1, :)*ZT; K];
+  HT = H - (conj(beta)*u)*(u'*H);
+  KT = K - (conj(beta)*u)*(u'*K);
+   
+  [KT, HT, QT, ZT] = util_recover_rad(KT, HT, flag);
+
+  QT = QT - (conj(beta)*(QT*u))*u';
   
-  QT = QT - (beta*(QT*u))*u';
-end
-
-
-
-
-function [v, beta] = house(x)  
-%
-%
-  
-  sigma(1) = x(2:end)'*x(2:end);
-  v = [1; x(2:end)];
-  if     sigma(1) == 0 && x(1) > 0, beta = 0;
-  elseif sigma(1) == 0 && x(1) < 0, beta = -2;
-  else
-    mu = sqrt(sigma(1) + x(1)^2);
-    if x(1) < 0, v(1) = x(1) - mu;
-    else         v(1) = -sigma(1)/(x(1) + mu); end
-    beta = 2*v(1)^2/(sigma(1) + v(1)^2);
-    v = v/v(1);
-  end
+  HT = gamma*HT;
+  KT = gamma*KT;
+  QT = gamma*QT;    
 end
